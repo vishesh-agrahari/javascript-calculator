@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <style>
+           .outerbox{
+               width:400px;
+               height:550px;
+               margin-top: 20px;
+               margin-left: 450px;
+               border: 3px solid ;
+               border-radius: 8px;
+               background-color:rgb(214, 66, 66);
+
+           }
+            .screenbar{
+                width:355px;
+                height:150px;
+                margin:6px;
+                border-radius: 12px;
+                background-color:lightskyblue ;
+                border:1px solid;
+                padding:16px;
+                font-size: 30px;
+            
+            }
+            .keybar{
+                width:390px;
+                height:350px;
+                margin-bottom:1px;
+                margin-left: 6px;
+                border:1px solid;
+                border-radius:12px;
+                background-color:lightgray;
+            }
+
+            .btn{
+                width:42px;
+                height:43px;
+                margin-left:45px;
+                margin-top:25px;
+                border-radius:12px;
+                font-size:20px;
+                background-color: hsla(0, 100%, 30%, 0.3);
+              }
+              .btnp{
+                width:130px;
+                height:43px;
+                margin-left:45px;
+                margin-top:25px;
+                border-radius:12px;
+                font-size:20px;
+                background-color: hsla(0, 100%, 30%, 0.3);
+              }
+      
+          
+ </style>
+    </head>
+    <body>
+        <div class="outerbox">
+        
+              <form name="forms">
+                  <input class="screenbar" type="text" name="answer">
+              </form>
+    
+            <div class="keybar">
+                
+                <input type="button" class="btn" style="background-color:red;" value="C" onclick="forms.answer.value=forms.answer.value.slice(0,-1)">
+                <input type="button" class="btn" style="background-color:red;  "value="AC" onclick="forms.answer.value=''">
+                <input type="button" class="btn" value="%" onclick="forms.answer.value+='%'">
+                <input type="button" class="btn" value="*" onclick="forms.answer.value+='*'">
+    
+                <br>
+            
+                <input type="button" class="btn" value="7" onclick="forms.answer.value+='7'">
+                <input type="button"class="btn" value="8" onclick="forms.answer.value+='8'">
+                <input type="button" class="btn"value="9" onclick="forms.answer.value+='9'">
+                <input type="button"class="btn" value="/" onclick="forms.answer.value+='/'">
+    
+                <br>
+                
+                <input type="button" class="btn"value="4" onclick="forms.answer.value+='4'">
+                <input type="button"class="btn" value="5" onclick="forms.answer.value+='5'">
+                <input type="button"class="btn" value="6" onclick="forms.answer.value+='6'">
+                <input type="button"class="btn" value="-" onclick="forms.answer.value+='-'">
+                
+                <br>
+                
+                <input type="button" class="btn"value="1" onclick="forms.answer.value+='1'">
+                <input type="button"class="btn" value="2" onclick="forms.answer.value+='2'">
+                <input type="button"class="btn" value="3" onclick="forms.answer.value+='3'">
+                <input type="button"class="btn" value="=" onclick="forms.answer.value=eval(forms.answer.value)">
+            
+
+                
+                
+                <br>
+                
+                <input type="button" class="btn" value="." onclick="forms.answer.value+='.'">
+                <input type="button" class="btn" value="0" onclick="forms.answer.value+='0'">
+                <input type="button" class="btnp" value="+" onclick="forms.answer.value+='+'">
+                
+            
+
+            </div>
+        </div>
+    </body>
+    </html>
